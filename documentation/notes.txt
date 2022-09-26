@@ -1,6 +1,6 @@
 1. Clean up old html (done)
 2. Remove svgs (done)
-3. Rename classes according to BEM
+3. Rename classes according to BEM(done)
 4. Fix head (done)
 5. Write documentation
 6. import google font (done)
