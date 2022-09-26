@@ -1,0 +1,19 @@
+$header__colour:#FF6D06;
+$main__colour:#F2F5FA;
+$footer__colour:#6487DC;
+$text__colour:#2D2D2A;
+
+header{
+	background:$header__colour;
+	color:$text__colour;
+}
+body{
+	color:$text__colour;
+}
+main{
+	background:$main__colour;
+}
+footer{
+	background:$footer__colour;
+	color:$text__colour;
+}
