@@ -1,0 +1,17 @@
+Colour pallette: 
+(some might be removed)
+
+#FF6D06
+#6487DC
+#2D2D2A
+#DDFFF7
+#272838
+#7A6B61
+#E06958
+#DCA264
+#9A7146
+#8B7F68
+#CEABB1
+#04B989
+#F2F5FA
+
