@@ -1,5 +1,10 @@
+.header, .main, .footer {
+  font-family: "Montserrat", sans-serif;
+}
+
 .header {
   background: #FF6D06;
+  display: flex;
 }
 .header__home, .header__link {
   color: #2D2D2A;
@@ -7,6 +12,7 @@
 }
 .header__list {
   list-style-type: none;
+  display: flex;
 }
 
 .main {
