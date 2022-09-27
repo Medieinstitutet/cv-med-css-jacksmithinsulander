@@ -2,9 +2,15 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.header, .footer {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   background: #FF6D06;
-  display: flex;
+  justify-content: space-between;
+  padding: 30px 10%;
 }
 .header__home, .header__link {
   color: #2D2D2A;
@@ -12,16 +18,23 @@
 }
 .header__list {
   list-style-type: none;
-  display: flex;
 }
 
 .main {
   background: #F2F5FA;
 }
+.main__text {
+  font-family: Inconsolata, monospace;
+}
 
 .footer {
   background: #6487DC;
   color: #F2F5FA;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,25 +4,36 @@ $footer__colour:#6487DC;
 $text__colour:#2D2D2A;
 
 .header, .main, .footer{
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
-
+.header, .footer{
+	display:flex;
+	align-items: center;
+}
 .header{
 	background:$header__colour;
-	display:flex;
+	justify-content:space-between;
+	padding:30px 10%;
 	&__home, &__link{
 		color:$text__colour;
 		text-decoration:none;
 	}
 	&__list{
 	list-style-type:none;
-	display:flex;
 	}
 }
 .main{
 	background:$main__colour;
+	&__text{
+		font-family:Inconsolata, monospace;
+	}
 }
 .footer{
 	background:$footer__colour;
 	color:$main__colour;
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	justify-content:center;
 }
