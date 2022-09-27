@@ -1,19 +1,21 @@
-header {
+.header {
   background: #FF6D06;
+}
+.header__home, .header__link {
   color: #2D2D2A;
+  text-decoration: none;
+}
+.header__list {
+  list-style-type: none;
 }
 
-body {
-  color: #2D2D2A;
-}
-
-main {
+.main {
   background: #F2F5FA;
 }
 
-footer {
+.footer {
   background: #6487DC;
-  color: #2D2D2A;
+  color: #F2F5FA;
 }
 
 /*# sourceMappingURL=style.css.map */

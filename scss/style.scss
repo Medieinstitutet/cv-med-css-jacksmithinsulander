@@ -3,17 +3,20 @@ $main__colour:#F2F5FA;
 $footer__colour:#6487DC;
 $text__colour:#2D2D2A;
 
-header{
+.header{
 	background:$header__colour;
-	color:$text__colour;
+	&__home, &__link{
+		color:$text__colour;
+		text-decoration:none;
+	}
+	&__list{
+	list-style-type:none;
+	}
 }
-body{
-	color:$text__colour;
-}
-main{
+.main{
 	background:$main__colour;
 }
-footer{
+.footer{
 	background:$footer__colour;
-	color:$text__colour;
+	color:$main__colour;
 }

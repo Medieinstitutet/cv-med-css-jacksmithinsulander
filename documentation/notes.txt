@@ -18,7 +18,6 @@
 18. Compress all images
 19. Use sprites
 20. Make sure you can tab through the website
-21. Check that contrasts and colours are AA-standard
-22. Colourpalette (check) on aremycolorsaccassible.com
-23. Make colour palette (done)
-24. Import normalize.css(done)
+21. Colourpalette (check) on aremycolorsaccassible.com
+22. Make colour palette (done)
+23. Import normalize.css(done)
