@@ -9,8 +9,21 @@
 
 .header {
   background: #FF6D06;
+  color: #2D2D2A;
+  border-top: 2px solid #2D2D2A;
+  border-bottom: 2px solid #2D2D2A;
   justify-content: space-between;
-  padding: 30px 10%;
+  padding: 15px 10%;
+}
+.header__link {
+  font-weight: bold;
+  transition: all 0.3s ease 0s;
+}
+.header__link:hover {
+  color: black;
+}
+.header__home {
+  font-size: 2rem;
 }
 .header__home, .header__link {
   color: #2D2D2A;
@@ -19,9 +32,15 @@
 .header__list {
   list-style-type: none;
 }
+.header__item {
+  display: inline-block;
+  padding: 0px 20px;
+}
 
 .main {
   background: #F2F5FA;
+  min-height: 86vh;
+  text-align: center;
   /* LIGHT THEME */
 }
 .main__date {
@@ -35,6 +54,17 @@
 }
 .main__text {
   color: #2D2D2A;
+}
+.main__title {
+  padding-top: 20%;
+  margin: 0;
+  font-size: 4rem;
+}
+.main__subtitle {
+  font-size: 1.5rem;
+}
+.main__text {
+  font-size: 0.9rem;
 }
 
 .footer {

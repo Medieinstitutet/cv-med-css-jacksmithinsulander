@@ -16,8 +16,21 @@ $text__colour:map.get($colours, deepBlack);
 }
 .header{
 	background:$header__colour;
+	color:$text__colour;
+	border-top:2px solid $text__colour;
+	border-bottom:2px solid $text__colour;
 	justify-content:space-between;
-	padding:30px 10%;
+	padding:15px 10%;
+	&__link{
+		font-weight:bold;
+		transition:all 0.3s ease 0s;
+		&:hover{
+			color:black;
+		}
+	}
+	&__home{
+		font-size:2rem;
+	}
 	&__home, &__link{
 		color:$text__colour;
 		text-decoration:none;
@@ -25,14 +38,31 @@ $text__colour:map.get($colours, deepBlack);
 	&__list{
 		list-style-type:none;
 	}
+	&__item{
+		display:inline-block;
+		padding:0px 20px;	
+	}
 }
 .main{
 	background:$main__colour;
+	min-height:86vh;
+	text-align:center;	
 	/* LIGHT THEME */ 
 	@each $text, $colour in $lightTheme{
 		&__#{$text} {
 			color:$colour;
 		}
+	}
+	&__title{
+		padding-top:20%;
+		margin:0;
+		font-size:4rem;
+	}
+	&__subtitle{
+		font-size:1.5rem;
+	}
+	&__text{
+		font-size:0.9rem;
 	}
 }
 .footer{

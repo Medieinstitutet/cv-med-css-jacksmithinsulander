@@ -11,7 +11,7 @@
 11. Make sure pictures contain alt-descritpions
 12. Make sure website works in, chrome, firefox, edge and safari
 13. Make sure to use minimum 2 positiontypes besides static
-14. Make sure to use both flex and grid
+14. Make sure to use both flex (done) and grid(for dexktop view)
 15. Check css against caniuse.com and shouldiprefix.com
 16. Make sure to separate and have controll when to use % vs vh/vw measures
 17. Post website on github pages(check tutorial)
