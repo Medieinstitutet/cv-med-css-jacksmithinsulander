@@ -1,0 +1,15 @@
+@use "colours" as *;
+@use "sass:map";
+
+$darkTheme:(
+	"date":map.get($colours, orange),
+	"title":map.get($colours, turqoise),
+	"subtitle":map.get($colours, lightBlue),
+	"text":map.get($colours, white),
+);
+$lightTheme:(
+	"date":map.get($colours, lightBlack),
+	"title":map.get($colours, lightRed),
+	"subtitle":map.get($colours, deepBlack),
+	"text":map.get($colours, deepBlack),
+);

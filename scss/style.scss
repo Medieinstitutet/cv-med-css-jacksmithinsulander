@@ -1,7 +1,11 @@
-$header__colour:#FF6D06;
-$main__colour:#F2F5FA;
-$footer__colour:#6487DC;
-$text__colour:#2D2D2A;
+@use "colours" as *;
+@use "themes" as *;
+@use "sass:map";
+
+$header__colour:map.get($colours, orange);
+$main__colour:map.get($colours, white);
+$footer__colour:map.get($colours, blue);
+$text__colour:map.get($colours, deepBlack);
 
 .header, .main, .footer{
 	font-family: "Montserrat", sans-serif;
@@ -19,13 +23,16 @@ $text__colour:#2D2D2A;
 		text-decoration:none;
 	}
 	&__list{
-	list-style-type:none;
+		list-style-type:none;
 	}
 }
 .main{
 	background:$main__colour;
-	&__text{
-		font-family:Inconsolata, monospace;
+	/* LIGHT THEME */ 
+	@each $text, $colour in $lightTheme{
+		&__#{$text} {
+			color:$colour;
+		}
 	}
 }
 .footer{

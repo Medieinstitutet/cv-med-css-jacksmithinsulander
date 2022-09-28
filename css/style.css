@@ -22,9 +22,19 @@
 
 .main {
   background: #F2F5FA;
+  /* LIGHT THEME */
+}
+.main__date {
+  color: #272838;
+}
+.main__title {
+  color: #E06958;
+}
+.main__subtitle {
+  color: #2D2D2A;
 }
 .main__text {
-  font-family: Inconsolata, monospace;
+  color: #2D2D2A;
 }
 
 .footer {
