@@ -21,3 +21,10 @@
 21. Colourpalette (check) on aremycolorsaccassible.com
 22. Make colour palette (done)
 23. Import normalize.css(done)
+24. Add image of myself
+25. Work on title
+26. Theme toggle. 
+27. Navbar dropdown
+28. Style phoneview.
+29. Style tablet view
+30. Style desktop view

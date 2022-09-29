@@ -3,7 +3,8 @@
 @use "sass:map";
 
 $header__colour:map.get($colours, orange);
-$main__colour:map.get($colours, white);
+$main__white:map.get($colours, white);
+$main__lightblue:map.get($colours, lightBlue);
 $footer__colour:map.get($colours, blue);
 $text__colour:map.get($colours, deepBlack);
 
@@ -23,10 +24,6 @@ $text__colour:map.get($colours, deepBlack);
 	padding:15px 10%;
 	&__link{
 		font-weight:bold;
-		transition:all 0.3s ease 0s;
-		&:hover{
-			color:black;
-		}
 	}
 	&__home{
 		font-size:2rem;
@@ -34,6 +31,10 @@ $text__colour:map.get($colours, deepBlack);
 	&__home, &__link{
 		color:$text__colour;
 		text-decoration:none;
+		transition:all 0.3s ease 0s;
+		&:hover{
+			color:black;
+		}
 	}
 	&__list{
 		list-style-type:none;
@@ -44,7 +45,7 @@ $text__colour:map.get($colours, deepBlack);
 	}
 }
 .main{
-	background:$main__colour;
+	background-image:linear-gradient($main__white, $main__lightblue, $main__white);
 	min-height:86vh;
 	text-align:center;	
 	/* LIGHT THEME */ 
@@ -64,10 +65,17 @@ $text__colour:map.get($colours, deepBlack);
 	&__text{
 		font-size:0.9rem;
 	}
+	&__date{
+		font-weight:bold;
+		position:absolute;
+		top:80%;
+		left:0;
+		transform:rotate(90deg);
+	}
 }
 .footer{
 	background:$footer__colour;
-	color:$main__colour;
+	color:$main__white;
 	position:fixed;
 	left:0;
 	bottom:0;
