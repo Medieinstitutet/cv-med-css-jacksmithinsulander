@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .header, .main, .footer {
   font-family: "Montserrat", sans-serif;
 }
@@ -25,6 +29,7 @@
   color: #2D2D2A;
   text-decoration: none;
   transition: all 0.3s ease 0s;
+  /* DESKTOPVIEW ONLY */
 }
 .header__home:hover, .header__link:hover {
   color: black;
@@ -37,11 +42,43 @@
   padding: 0px 20px;
 }
 
+.themeswitch__checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.themeswitch__checkbox:checked + .themeswitch__label .themeswitch__ball {
+  transform: translateX(24px);
+}
+.themeswitch__label {
+  background-color: #8B7F68;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+}
+.themeswitch__label .fa-moon, .themeswitch__label .fa-sun {
+  color: #F2F5FA;
+}
+.themeswitch__ball {
+  background-color: #2D2D2A;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+}
+
 .main {
   background-image: linear-gradient(#F2F5FA, #DDFFF7, #F2F5FA);
   min-height: 86vh;
   text-align: center;
   /* LIGHT THEME */
+  /* PHONEVIEW FONTSIZES AND POSITIONS */
 }
 .main__date {
   color: #272838;
@@ -59,6 +96,8 @@
   padding-top: 20%;
   margin: 0;
   font-size: 4rem;
+  line-height: 0.8;
+  text-shadow: 2px 2px #272838;
 }
 .main__subtitle {
   font-size: 1.5rem;
@@ -72,6 +111,17 @@
   top: 80%;
   left: 0;
   transform: rotate(90deg);
+}
+.main__profilepicture {
+  display: inline-flex;
+  -webkit-mask-image: url(../img/circle.png);
+  mask-image: url(../img/circle.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  padding: 10px;
+  margin: 20px;
 }
 
 .footer {

@@ -8,7 +8,7 @@
 8. Phone, tablet and desktop view
 9. Make sure it looks good zooming in/out (font sizes in rem instead of px)
 10. Check metatags. 
-11. Make sure pictures contain alt-descritpions
+11. Make sure pictures contain alt-descritpions (done)
 12. Make sure website works in, chrome, firefox, edge and safari
 13. Make sure to use minimum 2 positiontypes besides static
 14. Make sure to use both flex (done) and grid(for dexktop view)

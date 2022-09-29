@@ -7,7 +7,11 @@ $main__white:map.get($colours, white);
 $main__lightblue:map.get($colours, lightBlue);
 $footer__colour:map.get($colours, blue);
 $text__colour:map.get($colours, deepBlack);
-
+$text__shaddow:map.get($colours, lightBlack);
+$label__colour:map.get($colours, lightGray);
+*{
+	box-sizing:border-box;
+}
 .header, .main, .footer{
 	font-family: "Montserrat", sans-serif;
 }
@@ -32,6 +36,7 @@ $text__colour:map.get($colours, deepBlack);
 		color:$text__colour;
 		text-decoration:none;
 		transition:all 0.3s ease 0s;
+		/* DESKTOPVIEW ONLY */ 
 		&:hover{
 			color:black;
 		}
@@ -44,6 +49,38 @@ $text__colour:map.get($colours, deepBlack);
 		padding:0px 20px;	
 	}
 }
+.themeswitch{
+	&__checkbox{
+		opacity:0;
+		position:absolute;
+		&:checked + .themeswitch__label .themeswitch__ball{
+			transform:translateX(24px);
+		}
+	}
+	&__label{
+		background-color:$label__colour;
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+		border-radius:50px;
+		position:relative;
+		padding:5px;
+		height:26px;
+		width:50px;
+		.fa-moon, .fa-sun{
+			color:$main__white;
+		}
+	}
+	&__ball{
+		background-color:$text__colour;
+		position:absolute;
+		border-radius:50%;
+		top:2px;
+		left:2px;
+		width:22px;
+		height:22px;
+	}
+}
 .main{
 	background-image:linear-gradient($main__white, $main__lightblue, $main__white);
 	min-height:86vh;
@@ -54,10 +91,13 @@ $text__colour:map.get($colours, deepBlack);
 			color:$colour;
 		}
 	}
+	/* PHONEVIEW FONTSIZES AND POSITIONS */ 
 	&__title{
 		padding-top:20%;
 		margin:0;
 		font-size:4rem;
+		line-height:0.8;
+		text-shadow:2px 2px $text__shaddow;
 	}
 	&__subtitle{
 		font-size:1.5rem;
@@ -71,6 +111,17 @@ $text__colour:map.get($colours, deepBlack);
 		top:80%;
 		left:0;
 		transform:rotate(90deg);
+	}
+	&__profilepicture{
+		display: inline-flex;
+		-webkit-mask-image:url(../img/circle.png);
+		mask-image:url(../img/circle.png);
+		-webkit-mask-repeat:no-repeat;
+		mask-repeat:no-repeat;
+		-webkit-mask-position:center;
+		mask-position:center;
+		padding:10px;
+		margin:20px;
 	}
 }
 .footer{
