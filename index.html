@@ -23,7 +23,7 @@
 			</ul>
 		</nav>	
 		<span class="themeswitch">
-			<input type="checkbox" class="themeswitch__checkbox" id="checkbox">
+			<input type="checkbox" class="themeswitch__checkbox" id="checkbox" name="theme">
 			<label for="checkbox" class="themeswitch__label">
 				<i class="fas fa-sun"></i>
 				<i class="fas fa-moon"></i>
@@ -31,12 +31,12 @@
 			</label>
 		</span>
 	</header>
-	<main class="main">
+	<main id="main" class="main">
 		<div id="date" class="main__date">
 		</div>
-		<h1 class="main__title">Jack Smith Insulander  </h1>
-		<h2 class="main__subtitle">Blockchain Developer, Graphic Artist </h2>
-		<p class="main__text">The blockchain has been my second home since 2020. <br> Besides that, I'm physically located in Stockholm, Sweden</p>
+		<h1 class="main__title" id="mainTitle">Jack Smith Insulander  </h1>
+		<h2 class="main__subtitle" id="mainSubtitle">Blockchain Developer, Graphic Artist </h2>
+		<p class="main__text" id="mainText">The blockchain has been my second home since 2020. <br> Besides that, I'm physically located in Stockholm, Sweden</p>
 		<figure class="main__profilepicture">
 			<img src="img/profilePicture.jpg" alt="A picture of me">
 		</figrue>
@@ -46,9 +46,22 @@
 	</footer>
 	<script>
 		const checkbox = document.getElementById('checkbox');
-		checkbox.addEventListener('change', () => {
-		document.body.classList.toggle('dark');
-		});
+		checkbox.addEventListener('click', checkMode);
+		function checkMode() {
+			if (checkbox.checked) {
+				document.getElementById("main").classList.add('dark');
+				document.getElementById("date").classList.add('dark__date');
+				document.getElementById("mainTitle").classList.add('dark__title');
+				document.getElementById("mainSubtitle").classList.add('dark__subtitle');
+				document.getElementById("mainText").classList.add('dark__text');
+			} else {
+				document.getElementById("main").classList.remove('dark');
+				document.getElementById("date").classList.remove('dark__date');
+				document.getElementById("mainTitle").classList.remove('dark__title');
+				document.getElementById("mainSubtitle").classList.remove('dark__subtitle');
+				document.getElementById("mainText").classList.remove('dark__text');
+			}
+		}
 	</script>
 	<script>
 		date = new Date();
