@@ -34,27 +34,39 @@
 .header__home:hover, .header__link:hover {
   color: black;
 }
-.header__dropdowncontent {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 1;
+.header__navbar {
+  display: relative;
 }
-.header__dropdown:hover .header__dropdown__dropdowncontent {
+.header__link {
   display: block;
-}
-.header__dropdown:hover .header__dropdown__dropdowncontent:hover .header__dropdown:hover .header__dropdown__dropdowncontent__content {
-  display: block;
+  padding: 0 14px;
 }
 .header__list {
   list-style-type: none;
+  float: left;
 }
 .header__item {
-  display: inline-block;
-  padding: 0px 20px;
+  float: left;
+  display: block;
+  padding: 0px 30px;
+  position: relative;
+}
+.header__dropdown {
+  display: block;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  width: 180px;
+}
+.header__dropdown--content {
+  list-style: none;
+}
+.header__dropdown--link {
+  display: block;
+  padding: 8px 14px;
+}
+.header__dropdown--link:hover {
+  background-color: red;
 }
 
 .themeswitch__checkbox {
@@ -131,11 +143,7 @@
 }
 .main__profilepicture {
   display: inline-flex;
-  -webkit-mask-image: url(../img/circle.png);
-  mask-image: url(../img/circle.png);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
+  border-radius: 50%;
   mask-position: center;
   padding: 10px;
   margin: 20px;

@@ -42,29 +42,39 @@ $dim__gray:map.get($colours, dimGray);
 			color:black;
 		}
 	}
-	&__dropdowncontent{
-		display:none;
-		position:absolute;
-		background-color:#f9f9f9;
-		min-width:160px;
-		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-		padding:12px 16px;
-		z-index:1;
+	&__navbar{
+		display:relative;
 	}
-	&__dropdown{
-		&:hover &__dropdowncontent{
-			display:block;
-			&:hover &__content{
-				display:block;
-			}
-		}
+	&__link{
+		display:block;
+		padding:0 14px;		
 	}
 	&__list{
 		list-style-type:none;
+		float:left;
 	}
 	&__item{
-		display:inline-block;
-		padding:0px 20px;	
+		float:left;
+		display:block;
+		padding:0px 30px;
+		position:relative;	
+	}
+	&__dropdown{
+		display:block;
+		position:absolute;
+		background-color:white;
+		padding:10px;
+		width:180px;
+		&--content{
+			list-style:none;
+		}
+		&--link{
+			display:block;	
+			padding:8px 14px;
+			&:hover{
+				background-color:red;
+			}
+		}
 	}
 }
 .themeswitch{
@@ -134,11 +144,7 @@ $dim__gray:map.get($colours, dimGray);
 	}
 	&__profilepicture{
 		display: inline-flex;
-		-webkit-mask-image:url(../img/circle.png);
-		mask-image:url(../img/circle.png);
-		-webkit-mask-repeat:no-repeat;
-		mask-repeat:no-repeat;
-		-webkit-mask-position:center;
+		border-radius:50%;
 		mask-position:center;
 		padding:10px;
 		margin:20px;
