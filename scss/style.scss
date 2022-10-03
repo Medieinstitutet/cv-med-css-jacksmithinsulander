@@ -57,10 +57,13 @@ $dim__gray:map.get($colours, dimGray);
 		float:left;
 		display:block;
 		padding:0px 30px;
-		position:relative;	
+		position:relative;
+		&:hover .header__dropdown{
+			display:block;
+		}	
 	}
 	&__dropdown{
-		display:block;
+		display:none;
 		position:absolute;
 		background-color:white;
 		padding:10px;

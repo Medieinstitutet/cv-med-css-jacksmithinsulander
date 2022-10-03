@@ -51,8 +51,11 @@
   padding: 0px 30px;
   position: relative;
 }
-.header__dropdown {
+.header__item:hover .header__dropdown {
   display: block;
+}
+.header__dropdown {
+  display: none;
   position: absolute;
   background-color: white;
   padding: 10px;
