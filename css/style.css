@@ -152,20 +152,20 @@
   margin: 20px;
 }
 
-.dark {
+html.dark .main {
   background-image: linear-gradient(#2D2D2A, #7A6B61, #2D2D2A);
-  /* LIGHT THEME */
+  /* DARK THEME */
 }
-.dark__date {
+html.dark .main__date {
   color: #FF6D06;
 }
-.dark__title {
+html.dark .main__title {
   color: #04B989;
 }
-.dark__subtitle {
+html.dark .main__subtitle {
   color: #DDFFF7;
 }
-.dark__text {
+html.dark .main__text {
   color: #F2F5FA;
 }
 

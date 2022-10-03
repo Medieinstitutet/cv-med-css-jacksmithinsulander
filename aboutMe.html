@@ -64,19 +64,7 @@
 		const checkbox = document.getElementById('checkbox');
 		checkbox.addEventListener('click', checkMode);
 		function checkMode() {
-			if (checkbox.checked) {
-				document.getElementById("main").classList.add('dark');
-				document.getElementById("date").classList.add('dark__date');
-				document.getElementById("mainTitle").classList.add('dark__title');
-				document.getElementById("mainSubtitle").classList.add('dark__subtitle');
-				document.getElementById("mainText").classList.add('dark__text');
-			} else {
-				document.getElementById("main").classList.remove('dark');
-				document.getElementById("date").classList.remove('dark__date');
-				document.getElementById("mainTitle").classList.remove('dark__title');
-				document.getElementById("mainSubtitle").classList.remove('dark__subtitle');
-				document.getElementById("mainText").classList.remove('dark__text');
-			}
+			document.documentElement.classList.toggle('dark');
 		}
 	</script>
 	<script>

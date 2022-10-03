@@ -153,12 +153,14 @@ $dim__gray:map.get($colours, dimGray);
 		margin:20px;
 	}
 }
-.dark{
-	background-image:linear-gradient($text__colour, $dim__gray, $text__colour);		
-	/* LIGHT THEME */ 
-	@each $text, $colour in $darkTheme{
-		&__#{$text} {
-			color:$colour;
+html.dark{
+	.main{
+		background-image:linear-gradient($text__colour, $dim__gray, $text__colour);		
+	/* DARK THEME */ 
+		@each $text, $colour in $darkTheme{
+			&__#{$text} {
+				color:$colour;
+			}
 		}
 	}
 }
