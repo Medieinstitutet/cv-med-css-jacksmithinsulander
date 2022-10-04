@@ -17,13 +17,23 @@
   border-top: 2px solid #2D2D2A;
   border-bottom: 2px solid #2D2D2A;
   justify-content: space-between;
-  padding: 15px 10%;
+  padding: 15px 5%;
+}
+@media (min-width: 769px) {
+  .header {
+    padding: 15px 10%;
+  }
 }
 .header__link {
   font-weight: bold;
 }
 .header__home {
-  font-size: 2rem;
+  font-size: 1rem;
+}
+@media (min-width: 481px) {
+  .header__home {
+    font-size: 2rem;
+  }
 }
 .header__home, .header__link {
   color: #2D2D2A;
@@ -39,20 +49,33 @@
 }
 .header__link {
   display: block;
-  padding: 0 14px;
+  padding: 0 3px;
+  font-size: 0.7rem;
+}
+@media (min-width: 481px) {
+  .header__link {
+    padding: 0 7px;
+    font-size: 1rem;
+  }
 }
 .header__list {
   list-style-type: none;
   float: left;
+  padding: 0;
 }
 .header__item {
   float: left;
   display: block;
-  padding: 0px 30px;
+  padding: 0px 3px;
   position: relative;
 }
 .header__item:hover .header__dropdown {
   display: block;
+}
+@media (min-width: 481px) {
+  .header__item {
+    padding: 0px 7px;
+  }
 }
 .header__dropdown {
   display: none;
@@ -126,16 +149,42 @@
 .main__title {
   padding-top: 20%;
   margin: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 0.8;
   text-shadow: 2px 2px #272838;
 }
+@media (min-width: 768px) {
+  .main__title {
+    padding-top: 10%;
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main__title {
+    padding-top: 5%;
+  }
+}
 .main__subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 481px) {
+  .main__subtitle {
+    font-size: 1.75rem;
+  }
 }
 .main__text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
+}
+@media (min-width: 481px) {
+  .main__text {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1025px) {
+  .main__text {
+    font-size: 1rem;
+  }
 }
 .main__date {
   font-weight: bold;
@@ -150,6 +199,28 @@
   mask-position: center;
   padding: 10px;
   margin: 20px;
+  width: 50%;
+}
+@media screen and (min-width: 769px) {
+  .main__profilepicture {
+    width: 35%;
+  }
+}
+@media (min-width: 1025px) {
+  .main__profilepicture {
+    width: 20%;
+    margin: 0;
+    grid-column: 2;
+    grid-row: 1/3;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+    padding: 20px;
+  }
 }
 
 html.dark .main {

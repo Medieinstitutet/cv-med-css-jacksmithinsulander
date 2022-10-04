@@ -29,3 +29,4 @@
 29. Style tablet view
 30. Style desktop view
 31. Fix tokenization system for colours
+32. Add lazyloading
