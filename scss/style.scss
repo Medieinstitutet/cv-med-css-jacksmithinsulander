@@ -1,15 +1,6 @@
 @use "colours" as *;
 @use "themes" as *;
 @use "sass:map";
-
-$header__colour:map.get($colours, orange);
-$main__white:map.get($colours, white);
-$main__lightblue:map.get($colours, lightBlue);
-$footer__colour:map.get($colours, blue);
-$text__colour:map.get($colours, deepBlack);
-$text__shaddow:map.get($colours, lightBlack);
-$label__colour:map.get($colours, lightGray);
-$dim__gray:map.get($colours, dimGray);
 *{
 	box-sizing:border-box;
 }
@@ -21,10 +12,10 @@ $dim__gray:map.get($colours, dimGray);
 	align-items: center;
 }
 .header{
-	background:$header__colour;
-	color:$text__colour;
-	border-top:2px solid $text__colour;
-	border-bottom:2px solid $text__colour;
+	background:$orange;
+	color:$deepBlack;
+	border-top:2px solid $deepBlack;
+	border-bottom:2px solid $deepBlack;
 	justify-content:space-between;
 	padding:15px 5%;
 	@media (min-width: 769px){
@@ -40,12 +31,13 @@ $dim__gray:map.get($colours, dimGray);
 		}
 	}
 	&__home, &__link{
-		color:$text__colour;
+		color:$deepBlack;
 		text-decoration:none;
 		transition:all 0.3s ease 0s;
-		/* DESKTOPVIEW ONLY */ 
-		&:hover{
-			color:black;
+		@media (min-width: 768px){
+			&:hover{
+				color:black;
+			}
 		}
 	}
 	&__navbar{
@@ -80,7 +72,7 @@ $dim__gray:map.get($colours, dimGray);
 	&__dropdown{
 		display:none;
 		position:absolute;
-		background-color:white;
+		background-color:$white;
 		padding:10px;
 		width:180px;
 		&--content{
@@ -90,7 +82,8 @@ $dim__gray:map.get($colours, dimGray);
 			display:block;	
 			padding:8px 14px;
 			&:hover{
-				background-color:red;
+				background-color:$purple;
+				color:black;
 			}
 		}
 	}
@@ -104,7 +97,7 @@ $dim__gray:map.get($colours, dimGray);
 		}
 	}
 	&__label{
-		background-color:$label__colour;
+		background-color:$lightGray;
 		display:flex;
 		align-items:center;
 		justify-content:space-between;
@@ -114,11 +107,11 @@ $dim__gray:map.get($colours, dimGray);
 		height:26px;
 		width:50px;
 		.fa-moon, .fa-sun{
-			color:$main__white;
+			color:$white;
 		}
 	}
 	&__ball{
-		background-color:$text__colour;
+		background-color:$deepBlack;
 		position:absolute;
 		border-radius:50%;
 		top:2px;
@@ -128,9 +121,11 @@ $dim__gray:map.get($colours, dimGray);
 		transition:transform 0.2s linear;
 	}
 }
+body{
+	background:linear-gradient($white, $lightBlue, $white) no-repeat center center fixed;
+}
 .main{
-	background-image:linear-gradient($main__white, $main__lightblue, $main__white);
-	min-height:86vh;
+
 	text-align:center;	
 	/* LIGHT THEME */ 
 	@each $text, $colour in $lightTheme{
@@ -144,19 +139,22 @@ $dim__gray:map.get($colours, dimGray);
 		margin:0;
 		font-size:3rem;
 		line-height:0.8;
-		text-shadow:2px 2px $text__shaddow;
+		text-shadow:2px 2px $lightBlack;
 		@media (min-width: 768px){
 			padding-top:10%;
 			font-size:4rem;
 		}	
 		@media screen and (min-width: 1025px){
-			padding-top:5%;
+			padding:0;
 		}
 	}
 	&__subtitle{
 		font-size:1rem;
 		@media (min-width: 481px){
 			font-size:1.75rem;
+		}
+		@media (min-width: 1025px){
+			margin:0;
 		}
 	}
 	&__text{
@@ -167,6 +165,7 @@ $dim__gray:map.get($colours, dimGray);
 		}
 		@media (min-width: 1025px){
 			font-size:1rem;
+			margin:0;
 		}
 	}
 	&__date{
@@ -187,22 +186,26 @@ $dim__gray:map.get($colours, dimGray);
 			width:35%;
 		}
 		@media (min-width: 1025px){
-			width:20%;
+			width:70%;
 			margin:0;
+			padding:0;
 			grid-column:2;
 			grid-row:1/3;
 		}
 	}
-	@media screen and (min-width: 1025px){
+	@media (min-width: 1025px){
 		display:grid;
 		grid-template-columns:auto auto;
+		grid-auto-rows:80px;
 		text-align:left;
-		padding:20px;
+		padding:15% 10%;
 	}
 }
 html.dark{
-	.main{
-		background-image:linear-gradient($text__colour, $dim__gray, $text__colour);		
+	body{
+		background-image:linear-gradient($deepBlack, $dimGray, $deepBlack);
+	}
+	.main{		
 	/* DARK THEME */ 
 		@each $text, $colour in $darkTheme{
 			&__#{$text} {
@@ -212,8 +215,8 @@ html.dark{
 	}
 }
 .footer{
-	background:$footer__colour;
-	color:$main__white;
+	background:$blue;
+	color:$white;
 	position:fixed;
 	left:0;
 	bottom:0;
