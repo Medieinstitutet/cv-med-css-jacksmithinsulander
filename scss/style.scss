@@ -1,6 +1,7 @@
 @use "colours" as *;
 @use "themes" as *;
 @use "sass:map";
+@import "normalize";
 *{
 	box-sizing:border-box;
 }
