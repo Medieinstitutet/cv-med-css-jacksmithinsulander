@@ -126,7 +126,6 @@ body{
 	background:linear-gradient($white, $lightBlue, $white) no-repeat center center fixed;
 }
 .main{
-
 	text-align:center;	
 	/* LIGHT THEME */ 
 	@each $text, $colour in $lightTheme{
@@ -134,7 +133,6 @@ body{
 			color:$colour;
 		}
 	}
-	/* PHONEVIEW FONTSIZES AND POSITIONS */ 
 	&__title{
 		padding-top:20%;
 		margin:0;
@@ -202,6 +200,32 @@ body{
 		padding:15% 10%;
 	}
 }
+.about{
+	&__list{
+		list-style-type:none;	
+	}
+	&__item{
+		font-weight:bold;
+		color:$deepBlack;
+		font-size:0.666rem;	
+	}
+	@media (min-width:1025px){
+		display:inline;
+		float:left;
+		&__title{
+			padding-bottom:10px;
+		}
+		&__subtitle{
+			padding:20px 0;
+		}
+		&__text{	
+			padding-top:20px;
+		}
+		&__item{
+			font-size:0.9rem;
+		}
+	}
+}
 html.dark{
 	body{
 		background-image:linear-gradient($deepBlack, $dimGray, $deepBlack);
@@ -213,6 +237,9 @@ html.dark{
 				color:$colour;
 			}
 		}
+	}
+	.about{
+	
 	}
 }
 .footer{
