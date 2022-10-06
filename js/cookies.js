@@ -14,10 +14,10 @@ updateDarkThemeCssClass();
 
 function toggleTheme() {
 	if (currentTheme === 'dark') {
-		document.cookie = "themeColor=light;path=/;domain=example.com";
+		document.cookie = "themeColor=light;path=/;domain=../subdomains/aboutMe.html";
 		currentTheme = 'light';
 	} else {
-		document.cookie = "themeColor=dark;path=/;domain=example.com";
+		document.cookie = "themeColor=dark;path=/;domain=../subdomains/contactMe.html";
 		currentTheme = 'dark';
 	}
 	console.log('toggle theme to', currentTheme);
