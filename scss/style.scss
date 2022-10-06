@@ -192,6 +192,13 @@ body{
 			grid-row:1/3;
 		}
 	}
+	&__contactlink{
+		text-decoration:none;
+		color:$blue;
+		&:hover{
+			color:$purple;
+		}
+	}
 	@media (min-width: 1025px){
 		display:grid;
 		grid-template-columns:auto auto;
@@ -231,15 +238,22 @@ html.dark{
 		background-image:linear-gradient($deepBlack, $dimGray, $deepBlack);
 	}
 	.main{		
-	/* DARK THEME */ 
 		@each $text, $colour in $darkTheme{
 			&__#{$text} {
 				color:$colour;
 			}
 		}
+		&__contactlink{
+			color:$purple;
+			&:hover{
+				color:$blue;
+			}		
+		}
 	}
 	.about{
-	
+		&__item{
+			color:$white;
+		}
 	}
 }
 .footer{
